@@ -292,7 +292,7 @@ Comparison:
 
 
 ##### Factorial calculation using recursion vs loop method [code](code/general/recursion-vs-loop.rb)
-Recursion makes a lot of sense in many cases, and can make code clearer and expressive, but it can come at slight speed disadvantage. However as the size of the stack grows ( let's say calculating factorial for 20_000), recursion  may run into "stack too deep" errors.
+Recursion makes a lot of sense in many cases, and can make code clearer and expressive, but it can come at slight speed disadvantage. However as the size of the stack grows ( let's say calculating factorial for 20_000), recursion  may run into "stack too deep" errors, depending on your available resources.
 
 ```
 $ ruby -v code/general/recursion-vs-loop.rb
