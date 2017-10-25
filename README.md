@@ -289,6 +289,27 @@ Comparison:
             String#%:  1046689.1 i/s - 1.50x  slower
 ```
 
+
+
+##### Factorial calculation using recursion vs loop method [code](code/general/recursion-vs-loop.rb)
+Recursion makes a lot of sense in many cases, and can make code clearer and expressive, but it can come at slight speed disadvantage. However as the size of the stack grows ( let's say calculating factorial for 20_000), recursion  may run into "stack too deep" errors.
+
+```
+$ ruby -v code/general/recursion-vs-loop.rb
+ruby 2.4.2p198 (2017-09-14 revision 59899) [x86_64-darwin16]
+Warming up --------------------------------------
+                loop     2.617k i/100ms
+           recursion     2.285k i/100ms
+Calculating -------------------------------------
+                loop     26.563k (± 4.4%) i/s -    133.467k in   5.034732s
+           recursion     23.779k (± 4.7%) i/s -    118.820k in   5.008148s
+
+Comparison:
+                loop:    26562.9 i/s
+           recursion:    23778.9 i/s - 1.12x  slower
+```
+
+
 ### Array
 
 ##### `Array#bsearch` vs `Array#find` [code](code/array/bsearch-vs-find.rb)
